@@ -25,7 +25,7 @@ class Val
      * @param $arg
      * @return bool
      */
-    public function minLength($data, $arg){
+    public function minLength($data , $arg){
 
         if(strlen($data ) < is_int($arg)) {
             echo "you streng can only $arg leng";

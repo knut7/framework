@@ -23,6 +23,9 @@
 
 namespace FWAP\Core\Model;
 
+
+use function constant;
+use FWAP\Config\Config;
 use function var_dump;
 
 class Model
@@ -49,8 +52,9 @@ class Model
 
 
     public function getloadModel() {
+
         $this->modelClass = get_class($this) . 'Model';
-        $path = PV . APP . $this->modelPath . $this->modelClass . '.php';
+        $path = DIR_FILE . $this->modelPath . $this->modelClass . '.php';
 
         if (file_exists($path)  || is_readable($path)) {
             require_once $path;
@@ -70,7 +74,8 @@ class Model
 
         $a = require 'Config/Database/Config.php';
         $this->db = new $className($a);
-       return  $this->model = new $this->modelClass($this->db);
+         return $this->model = new $this->modelClass($this->db);
+
     }
 
 

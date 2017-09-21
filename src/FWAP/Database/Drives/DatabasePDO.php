@@ -61,10 +61,9 @@ use FWAP\Database\DBconnection;
          } while (
              $stmt->nextRowset());
 
-         $this->insert();
      }
 
-     public function select($table, $fields = "*", $where = ' ', $order = '', $limit = null, $offset = null, $array = array (), $fetchMode = PDO::FETCH_ASSOC)
+     public function select($table, $fields = "*", $where = ' ', $order = '', $limit = null, $offset = null, $array = array (), $fetchMode = \PDO::FETCH_ASSOC)
      {
          $sql = ' SELECT ' . $fields . ' FROM ' . $table
              . (($where) ? ' WHERE ' . $where : " ")

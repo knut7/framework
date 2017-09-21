@@ -41,12 +41,8 @@ class Language
         $file = DIR_LANGUAGE . LANGUAGE_CODE . DS . "$name.php";
 
         /** check if is readable */
-        if (is_readable($file)) {
-            /** require file */
-            return $this->array = require_once($file);
-        } else {
-             echo Exception::langNotLoad();
-        }
+       require_once($file);
+
     }
 
     /**

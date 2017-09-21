@@ -21,4 +21,5 @@ namespace FWAP\Core\Controller;
 
 interface iController {
 
+    public function getModel();
 }

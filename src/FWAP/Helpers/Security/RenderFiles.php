@@ -19,6 +19,8 @@
 namespace FWAP\Helpers\Security;
 
 
+use FWAP\Exception\Exception;
+
 class RenderFiles implements iRenderFiles
 {
     private $index = "index.phtml";
@@ -58,7 +60,7 @@ class RenderFiles implements iRenderFiles
     {
 
         if (!is_readable(VIEW . $controller . DS . $view . $this->ex) || !file_exists(VIEW . $controller . DS . $view . $this->ex)) {
-            return Exceptio::notIndex($controller);
+            return Exception::notIndex($controller);
         }
         require_once VIEW . $controller . DS . $view . $this->ex;
     }

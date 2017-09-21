@@ -28,7 +28,7 @@
  * This is for other hash keys... Not sure yet
  *
  */
-
+namespace FWAP\Config;
 require './Config/Config.module.php';
 
 define('AUTH_KEY', ' Xakm<o xQy rw4EMsLKM-?!T+,PFF})H4lzcW57AF0U@N@< >M%G4Yt>f`z]MON');
@@ -78,7 +78,7 @@ define('PV', 'Module' . DS);
  */
 
    global $MY_PROJECT_NAME;
-if (isset($MY_PROJECT_NAME)) {
+if (!empty($MY_PROJECT_NAME)) {
     define('APP', $MY_PROJECT_NAME);
 } else {
     define('APP', 'Applications');
@@ -144,3 +144,7 @@ define('DIR_LOGS', 'FWAP/storage/');
 define('VIEW', PV . APP . DS . 'View' . DS);
 
 
+class Config {
+
+    public static $project = "apweb";
+}

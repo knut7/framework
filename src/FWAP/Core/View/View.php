@@ -30,6 +30,7 @@ use FWAP\Helpers\Security\RenderFiles;
 use function ob_end_clean;
 use function ob_get_contents;
 use function ob_start;
+use function var_dump;
 
 class View extends RenderFiles implements iView
 {
@@ -59,12 +60,12 @@ class View extends RenderFiles implements iView
         $this->view = $view;
         $this->controllers = get_class($controller);
 
-        $this->init();
-        
+        return $this->init();
+
 
     }
 
-    private function init() : bool
+    public function init() : bool
     {
         $this->isViewPath($this->controllers);
         $this->isHeader();

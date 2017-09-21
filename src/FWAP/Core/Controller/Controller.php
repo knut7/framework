@@ -27,7 +27,6 @@ use FWAP\Core\View\iView;
 use FWAP\Core\View\View;
 use FWAP\Helpers\Uploads;
 use FWAP\Library\Bootstrap;
-use FWAP\Helpers\Language;
 use FWAP\Library\Log;
 use FWAP\Helpers\Security\Session;
 
@@ -35,7 +34,7 @@ use FWAP\Helpers\Security\Session;
  * @property iView iView desacopolamento da View
  * @property iLanguage iLanguage desacopolamento da Language
  */
-abstract class Controller extends Model implements iController {
+ class Controller extends Model implements iController {
 
     public $view;
     public $language;
@@ -69,4 +68,4 @@ abstract class Controller extends Model implements iController {
         return $this->model = $this->getloadModel();
     }
 
-}
+ }

@@ -41,18 +41,19 @@ class Assets {
         if (is_array($files)) {
             foreach ($files as $key => $value) {
                 static::resource($value, 'js');
+                break;
             }
         }
-        static::resource($files, 'js');
+         static::resource($files, 'js');
     }
 
     public static function css(Array $files) {
         if (is_array($files)) {
             foreach ($files as $key => $value) {
-                static::resource($value, 'css');
+               static::resource($value, 'css');
             }
         }
-        static::resource($files, 'css');
+         static::resource($files, 'css');
     }
 
 }

@@ -102,7 +102,7 @@ class Validate
      */
     public function getPostDate($fieldName = false)
     {
-        if ($fieldName) {
+        if (! empty($fieldName ) ) {
             if (isset($this->_postData[$fieldName]))
                 return $this->_postData[$fieldName];
 
@@ -120,7 +120,7 @@ class Validate
      * @param string $typeOfValidator A method from the Security/Val class
      * @param string $arg A property to validate against
      */
-    public function val($typeOfValidator, $arg = null)
+    public function val($typeOfValidator, $arg)
     {
         if ($arg == null && $this->_val  instanceof Val)
             $error = $this->_val->{$typeOfValidator}($this->_postData[$this->_currentItem]);
