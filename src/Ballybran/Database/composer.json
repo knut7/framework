@@ -1,0 +1,25 @@
+
+{
+    "name": "Ballybran/Database",
+    "type": "library",
+    "description": "The Ballybran Database package.",
+    "keywords": ["framwork","mvc"],
+    "homepage": "https://github.com/Knut7/framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcio Zebede",
+            "email": "marciozebedeu@gmail.com",
+            "homepage": "http://artphoweb.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ballybran\\Database": ""
+        }
+    }
+}
