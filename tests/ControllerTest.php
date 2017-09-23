@@ -8,7 +8,7 @@ class ControllerTest extends PHPUnit {
 
     public function testCase(){
 
-       $obj = new \FWAP\Core\Controller\Controller();
+       $obj = new \Ballybran\Core\Controller\Controller();
 
        $this->getActualOutput();
     }
